@@ -7,7 +7,6 @@ body{
 }
 .first-container{
     display: flex;
-    align-items: center;
     margin:50px;
 }
 .half-width{
@@ -34,25 +33,6 @@ a{
 }
 .second-container{
     margin: 60px;
-}
-hr{
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
-.brand{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.brand img{
-    padding: 20px;
-}
-.brand a{
-    margin-top: 0;
-    border: none;
-    background-color: white;
-
 }
 .popular{
     margin-top: 100px;
@@ -104,7 +84,36 @@ footer p{
     font-size: 14px;
 }
 @media only screen and (max-width:688px) {
-    main{
-        width:100%;
+    .first-container{
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 2%;
+    }
+    .brand{
+        display: none;
+    }
+    .half-width{
+        width: 90%;
+        margin-bottom: 40px;
+        margin-left: 15px;
+    }
+    .half-width img{
+        width: 100%;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 3%;
+    }
+}
+@media only screen and (min-width: 688px) and (max-width:992px) {
+    .first-container{
+        width: 90%;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
